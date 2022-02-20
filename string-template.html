@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Belajar Javascript - String Template</title>
+    </head>
+    <body>
+        <script>
+            const name = "Egi Nugraha";
+            const firstName = "Egi";
+            const middleName = "Ar";
+            const lastName = "Nugraha";
+            const template = `Name : ${firstName} ${middleName} ${lastName}`;
+            const lama = "Name : " + firstName + " " + middleName + " " + lastName;
+
+            console.info(template);
+
+            const nilai = 50;
+            const template2 = `Name : ${name}, Lulus : ${nilai > 70}`;
+
+            console.info(template2);
+
+            const multiLine = `Nama Saya Egi,
+            Sekarang Kerja,
+            Sering Juga Bikin Konten Programming,
+            Kalo lagi males, paling tidur`;
+             
+            document.writeln("<pre>");
+            document.writeln(multiLine);
+            document.writeln("</pre>");
+        </script>
+    </body>
+</html>
