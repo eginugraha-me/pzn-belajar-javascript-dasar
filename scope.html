@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Belajar Javascript - Scope</title>
+    </head>
+    <body>
+        <script>
+            let counter = 0;
+            function hitMe(){
+                counter++;
+            }
+
+            function other(){
+                // local scope other
+            }
+
+            hitMe();
+            hitMe();
+            console.info(counter);
+
+            function first(){
+                let firstVariable = "First";
+                function firstNested(){
+                    console.info(firstVariable);
+                    const firstNestedVariable = "First Nested";
+                }
+
+                firstNested();
+                console.info(firstNestedVariable);
+            }
+
+            function second(){
+                let secondVariable = "Second";
+                // console.info(firstVariable); // ERROR
+            }
+
+            first();
+            second();
+
+            // global scope
+            // console.info(firstVariable); // ERROR
+            // console.info(secondVariable); // ERROR
+        </script>
+    </body>
+</html>
