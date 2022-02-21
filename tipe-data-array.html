@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Belajar Javascript - Array</title>
+    </head>
+    <body>
+        <script>
+            let arrayKosong = [];
+            let arrayNama = ["Egi", "Ar", "Nugraha"];
+
+            const names = [];
+            names.push("Egi");
+            names.push("Ar", "Nugraha");
+            names.push("Budi", "Joko", "Rudi");
+
+            console.table(names);
+            console.info(names[0]);
+            console.info(names[1]);
+            console.info(names[2]);
+
+            names[0] = "Web";
+            names[1] = "Developer";
+            names[2] = "Junior";
+
+            console.table(names);
+
+            delete names[3];
+            console.table(names);
+            names.push("Egi Lagi");
+            console.table(names);
+
+            names[3] = "Diubah Lagi";
+            names.push(1,2,3,4,5);
+            names.push(["Egi", "Ar", "Nugraha"]);
+            console.table(names);
+        </script>
+    </body>
+</html>
