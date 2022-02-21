@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Belajar Javascript - Operator In</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                firstName: "Egi",
+                lastName: "Nugraha"
+            }
+
+            if ("firstName" in person){
+                alert(`Hello ${person.firstName}`);
+            } else {
+                alert(`Halo`);
+            } 
+
+            const student = {
+                firstName: "Egi",
+                middleName: undefined,
+                lastName: "Nugraha"
+            }
+
+            if("middleName" in student){
+                alert(`Hello ${student.middleName}`);
+            } else {
+                alert(`Halo Student`);
+            }
+
+            const names = [null, "Nugraha", null];
+            const result = 0 in names;
+            document.writeln(`<p>${result}</p>`);
+        </script>
+    </body>
+</html>
