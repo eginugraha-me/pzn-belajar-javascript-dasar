@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Belajar Javascript - With Statement</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                firstName: "Egi",
+                middleName: "Ar",
+                lastName: "Nugraha"
+            }
+
+            console.info(person.firstName);
+            console.info(person.middleName);
+            console.info(person.lastName);
+            
+            const firstName = "Budi";
+            const lastName = "Budiman";
+            
+            with (person) {
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+        </script>
+    </body>
+</html>
