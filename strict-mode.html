@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Belajar Javascript Dasar - Strict Mode</title>
+    </head>
+    <body>
+       <script>
+            function useStrictMode(){
+                'use strict'
+                const person = {
+                    firstName: "Egi"
+                };
+
+                // error
+                with (person) {
+                    console.info(firstName);
+                }
+            };
+       </script> 
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Belajar Javascript Dasar - Destructuring</title>
+    </head>
+    <body>
+       <script>
+            {
+                const names = ["Egi", "Ar", "Nugraha", "Gilang", "Gulam"];
+                let [firstName, middleName, lastName, ...others] = names;
+
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+                console.info(others);
+            }
+
+            {
+                const person = {
+                    firstName: "Egi",
+                    lastName: "Nugraha",
+                    address: {
+                        street: "Dago",
+                        city: "Bandung",
+                        country: "Indonesia"
+                    },
+                    hobby: "Tidur",
+                    channel: "Web Developer Junior"
+                };
+
+                let {firstName, lastName, address: {city, street, country}, ...others} = person;
+                console.info(firstName);
+                console.info(lastName);
+                console.info(city);
+                console.info(street);
+                console.info(country);
+                console.info(others);
+            }
+
+            {
+                function displayPerson({firstName, middleName, lastName}) {
+                    console.info(firstName);
+                    console.info(middleName);
+                    console.info(lastName);
+                }
+
+                const person = {
+                    firstName: "Egi",
+                    middleName: "Ar",
+                    lastName: "Nugraha",
+                };
+
+                displayPerson(person);
+            }
+
+            {
+                function sum([first, second]) {
+                    return first + second;
+                }
+
+                console.info(sum([1, 1]));
+                console.info(sum([10, 10]));
+            }
+
+            {
+                const names = ["Egi", "Gilang", "Bima"];
+                const [firstName, middleName = "Ar", lastName = "Nugraha"] = names;
+
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+
+            {
+                const person = {
+                    firstName: "Egi",
+                    middleName: "Budi",
+                    lastName: "Nugraha"
+                };
+
+                let {firstName, middleName = "Ar", lastName} = person;
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+
+            {
+                const person = {
+                    firstName: "Egi",
+                    middleName: "Bima",
+                    lastName: "Nugraha"
+                };
+
+                let {firstName: namaDepan,
+                    middleName: namaTengah = "Ar",
+                    lastName: namaBelakang} = person;
+                console.info(namaDepan);
+                console.info(namaTengah);
+                console.info(namaBelakang);
+            }
+       </script> 
+    </body>
+</html>
